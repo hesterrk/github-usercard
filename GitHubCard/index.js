@@ -29,8 +29,8 @@ axios.get('https://api.github.com/users/hesterrk');
 
 const followersArray = [];
 
-/* Step 3: Create a function that accepts a single object as its only argument,
-          Using DOM methods and properties, create a component that will return the following DOM element:
+// /* Step 3: Create a function that accepts a single object as its only argument,
+//           Using DOM methods and properties, create a component that will return the following DOM element:
 
 <div class="card">
   <img src={image url of user} />
@@ -61,9 +61,27 @@ function createCard(obj) {
   let p2 = document.createElement('p');
   let p3 = document.createElement('p');
   let a = document.createElement('a');
-  let p4 = document.createElement('p')
-  let p5 = document.createElement('p')
-  let p6 = document.createElement('p')
+  let p4 = document.createElement('p');
+  let p5 = document.createElement('p');
+  let p6 = document.createElement('p');
+
+  cards.appendChild(card);
+  card.appendChild(image);
+  card.appendChild(cardinfo);
+  cardinfo.appendChild(header);
+  cardinfo.appendChild(p1);
+  cardinfo.appendChild(p2);
+  cardinfo.appendChild(p3);
+  cardinfo.appendChild(p4);
+  cardinfo.appendChild(p5);
+  cardinfo.appendChild(p6);
+  p3.appendChild(a);
+
+
+
+
+
+
 
 
 
