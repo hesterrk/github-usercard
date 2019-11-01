@@ -32,22 +32,22 @@ const followersArray = [];
 // /* Step 3: Create a function that accepts a single object as its only argument,
 //           Using DOM methods and properties, create a component that will return the following DOM element:
 
-<div class="card">
-  <img src={image url of user} />
-  <div class="card-info">
-    <h3 class="name">{users name}</h3>
-    <p class="username">{users user name}</p>
-    <p>Location: {users location}</p>
-    <p>Profile:  
-      <a href={address to users github page}>{address to users github page}</a>
-    </p>
-    <p>Followers: {users followers count}</p>
-    <p>Following: {users following count}</p>
-    <p>Bio: {users bio}</p>
-  </div>
-</div>
+// {/* <div class="card">
+//   <img src={image url of user} />
+//   <div class="card-info">
+//     <h3 class="name">{users name}</h3>
+//     <p class="username">{users user name}</p>
+//     <p>Location: {users location}</p>
+//     <p>Profile:  
+//       <a href={address to users github page}>{address to users github page}</a>
+//     </p>
+//     <p>Followers: {users followers count}</p>
+//     <p>Following: {users following count}</p>
+//     <p>Bio: {users bio}</p>
+//   </div>
+// </div>
 
-*/
+// */ */}
 
 function createCard(obj) {
 
@@ -78,13 +78,12 @@ function createCard(obj) {
   p3.appendChild(a);
 
 
+  card.classList.add('card');
+  cardinfo.classList.add('card-info');
+  header.classList.add('name');
+  p1.classList.add('username');
 
-
-
-
-
-
-
+  
 
 
 
