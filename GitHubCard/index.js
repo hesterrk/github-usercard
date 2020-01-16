@@ -90,7 +90,7 @@ function createCard(obj) {
   p1.textContent = `${obj.login}`;
   p2.textContent = `Location: ${obj.location}`;
   p3.textContent = `Profile: `;
-  a.href =  `${obj.html_url} `
+  a.setAttribute('href', `${obj.avatar_url}`);
   p4.textContent = (`Followers: ${obj.followers}`);
   p5.textContent = (` Following: ${obj.following}`);
   p6.textContent = (`Bio: ${obj.bio}`);
