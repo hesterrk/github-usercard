@@ -60,6 +60,22 @@ function createCard(obj) {
   let p4 = document.createElement('p');
   let p5 = document.createElement('p');
   let p6 = document.createElement('p');
+  
+  //stretch
+//div 
+
+let container = document.querySelector('.container');
+let buttonDiv = document.createElement('div');
+container.append('buttonDiv');
+buttonDiv.classList.add('buttonDiv');
+buttonDiv.textContent = `Hi`;
+
+
+  //button 
+  let button = document.createElement('button');
+  buttonDiv.append('button');
+  button.classList.add('buttons');
+  button.textContent = `Click for more Details`;
 
   
   card.appendChild(image);
@@ -74,6 +90,8 @@ function createCard(obj) {
   p3.appendChild(a);
 
 
+
+
   card.classList.add('card');
   cardinfo.classList.add('card-info');
   header.classList.add('name');
@@ -84,7 +102,7 @@ function createCard(obj) {
   image.src =  `${obj.avatar_url}`
   header.textContent = `${obj.name}`;
   p1.textContent = `${obj.login}`;
-  p2.textContent = `${obj.location}`;
+  p2.textContent = `Location: ${obj.location}`;
   p3.textContent = `Profile: `;
   a.textContent = `${obj.html_url}`
   p4.textContent = (`Followers: ${obj.followers}`);

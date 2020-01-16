@@ -125,3 +125,19 @@ body {
 
 
 
+
+
+.buttonDiv  {
+border: 2px red; 
+padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 5px;
+  background-color: coral;
+  margin-bottom: 5px;
+
+}
+
+
+
