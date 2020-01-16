@@ -116,24 +116,6 @@ console.log(error);
 });
 
 
-//adding Lambda instructors 
-
-/* List of LS Instructors Github username's: 
-  tetondan
-  dustinmyers
-  justsml
-  luishrd
-  bigknell
-*/
-
-// Get at least 5 different Github usernames and add them as
-//           Individual strings to the friendsArray below.
-          
-//           Using that array, iterate over it, requesting data for each user, creating a new card for each
-//           user, and adding that card to the DOM.
-// */
-
-// const followersArray = ['tetondan', 'dustinmyers', 'justsml', 'luishrd', 'bigknell'];
 
 //axios request
 
@@ -141,13 +123,10 @@ console.log(error);
 axios.get('https://api.github.com/users/hesterrk/followers')
 
 .then(response => {
-let followerData = response.data;
-
-followerData.forEach((user) => {
+response.data.forEach(user => {
 const cardFriends = new createCard(user);
 cards.appendChild(cardFriends);
-})
-
+});
 
 
 })
