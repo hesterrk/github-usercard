@@ -3,7 +3,7 @@
            https://api.github.com/users/<your name>
 */
 
-let data = axios.get('https://api.github.com/users/hesterrk')
+// let data = axios.get('https://api.github.com/users/hesterrk')
 
 // .then(response => {
 //   console.log(response);
@@ -59,8 +59,7 @@ const followersArray = [];
 
 function createCard(obj) {
 
-  //parent container 
-  let cards = document.querySelector('.cards');
+  
 
   let card = document.createElement('div');
   let image = document.createElement('img');
@@ -109,12 +108,28 @@ function createCard(obj) {
 }
 
 
+//selecting parent 
+let cards = document.querySelector('.cards');
 
-// createCard(obj);
+//axios request
+
+ axios.get('https://api.github.com/users/hesterrk')
+
+.then(response => {
+    cards.appendChild(createCard(response.data));
+  
+
+})
+.catch(error => {
+console.log(error);
+
+});
 
 
 
-cards.appendChild(createCard);
+
+
+
 
 
 
