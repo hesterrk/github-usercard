@@ -3,7 +3,15 @@
            https://api.github.com/users/<your name>
 */
 
-axios.get('https://api.github.com/users/hesterrk');
+let data = axios.get('https://api.github.com/users/hesterrk')
+
+// .then(response => {
+//   console.log(response);
+// })
+// .catch(error => {
+// console.log(error);
+
+// });
 
 
 /* Step 2: Inspect and study the data coming back, this is YOUR 
@@ -51,6 +59,7 @@ const followersArray = [];
 
 function createCard(obj) {
 
+  //parent container 
   let cards = document.querySelector('.cards');
 
   let card = document.createElement('div');
@@ -65,7 +74,7 @@ function createCard(obj) {
   let p5 = document.createElement('p');
   let p6 = document.createElement('p');
 
-  cards.appendChild(card);
+  
   card.appendChild(image);
   card.appendChild(cardinfo);
   cardinfo.appendChild(header);
@@ -83,16 +92,36 @@ function createCard(obj) {
   header.classList.add('name');
   p1.classList.add('username');
 
-  
 
 
+  image.textContent = ('src', `${obj.avatar_url}`)
+  header.textContent = `${obj.name}`;
+  p1.textContent = `${obj.login}`;
+  p2.textContent = `${obj.location}`;
+  p3.textContent = `Profile: `;
+  a.textContent = `${obj.html_url}`
+  p4.textContent = (`Followers: ${obj.followers}`);
+  p5.textContent = (` Following: ${obj.following}`);
+  p6.textContent = (`Bio: ${obj.bio}`);
 
-
-  return cards
+  return card
   
 }
 
-createCard();
+
+
+// createCard(obj);
+
+
+
+cards.appendChild(createCard);
+
+
+
+
+
+
+
 
 /* List of LS Instructors Github username's: 
   tetondan
