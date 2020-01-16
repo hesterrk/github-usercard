@@ -93,7 +93,7 @@ function createCard(obj) {
 
 
 
-  image.textContent = ('src', `${obj.avatar_url}`)
+  image.src =  `${obj.avatar_url}`
   header.textContent = `${obj.name}`;
   p1.textContent = `${obj.login}`;
   p2.textContent = `${obj.location}`;
