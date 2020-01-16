@@ -56,7 +56,6 @@ function createCard(obj) {
   let p1 = document.createElement('p');
   let p2 = document.createElement('p');
   let p3 = document.createElement('p');
-  let a = document.createElement('a');
   let p4 = document.createElement('p');
   let p5 = document.createElement('p');
   let p6 = document.createElement('p');
@@ -73,7 +72,7 @@ function createCard(obj) {
   cardinfo.appendChild(p4);
   cardinfo.appendChild(p5);
   cardinfo.appendChild(p6);
-  p3.appendChild(a);
+  
 
 
 
@@ -90,7 +89,7 @@ function createCard(obj) {
   p1.textContent = `${obj.login}`;
   p2.textContent = `Location: ${obj.location}`;
   p3.textContent = `Profile: `;
-  a.setAttribute('href', `${obj.avatar_url}`);
+  p3.innerHTML = `Profile: <a href=${obj.html_url}>${obj.html_url}</a>`
   p4.textContent = (`Followers: ${obj.followers}`);
   p5.textContent = (` Following: ${obj.following}`);
   p6.textContent = (`Bio: ${obj.bio}`);
