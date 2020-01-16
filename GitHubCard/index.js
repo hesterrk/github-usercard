@@ -61,21 +61,7 @@ function createCard(obj) {
   let p5 = document.createElement('p');
   let p6 = document.createElement('p');
   
-  //stretch
-//div 
 
-let container = document.querySelector('.container');
-let buttonDiv = document.createElement('div');
-container.append('buttonDiv');
-buttonDiv.classList.add('buttonDiv');
-buttonDiv.textContent = `Hi`;
-
-
-  //button 
-  let button = document.createElement('button');
-  buttonDiv.append('button');
-  button.classList.add('buttons');
-  button.textContent = `Click for more Details`;
 
   
   card.appendChild(image);
@@ -104,7 +90,7 @@ buttonDiv.textContent = `Hi`;
   p1.textContent = `${obj.login}`;
   p2.textContent = `Location: ${obj.location}`;
   p3.textContent = `Profile: `;
-  a.textContent = `${obj.html_url}`
+  a.href =  `${obj.html_url} `
   p4.textContent = (`Followers: ${obj.followers}`);
   p5.textContent = (` Following: ${obj.following}`);
   p6.textContent = (`Bio: ${obj.bio}`);
