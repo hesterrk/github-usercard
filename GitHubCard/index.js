@@ -3,17 +3,6 @@
            https://api.github.com/users/<your name>
 */
 
-// let data = axios.get('https://api.github.com/users/hesterrk')
-
-// .then(response => {
-//   console.log(response);
-// })
-// .catch(error => {
-// console.log(error);
-
-// });
-
-
 /* Step 2: Inspect and study the data coming back, this is YOUR 
    github info! You will need to understand the structure of this 
    data in order to use it to build your component function 
@@ -35,7 +24,6 @@
           user, and adding that card to the DOM.
 */
 
-const followersArray = [];
 
 // /* Step 3: Create a function that accepts a single object as its only argument,
 //           Using DOM methods and properties, create a component that will return the following DOM element:
@@ -116,7 +104,9 @@ let cards = document.querySelector('.cards');
  axios.get('https://api.github.com/users/hesterrk')
 
 .then(response => {
-    cards.appendChild(createCard(response.data));
+
+  const thedata = response.data
+    cards.appendChild(createCard(thedata));
   
 
 })
@@ -126,17 +116,7 @@ console.log(error);
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
+//adding Lambda instructors 
 
 /* List of LS Instructors Github username's: 
   tetondan
@@ -145,3 +125,34 @@ console.log(error);
   luishrd
   bigknell
 */
+
+// Get at least 5 different Github usernames and add them as
+//           Individual strings to the friendsArray below.
+          
+//           Using that array, iterate over it, requesting data for each user, creating a new card for each
+//           user, and adding that card to the DOM.
+// */
+
+// const followersArray = ['tetondan', 'dustinmyers', 'justsml', 'luishrd', 'bigknell'];
+
+//axios request
+
+
+axios.get('https://api.github.com/users/hesterrk/followers')
+
+.then(response => {
+let followerData = response.data;
+
+followerData.forEach((user) => {
+const cardFriends = new createCard(user);
+cards.appendChild(cardFriends);
+})
+
+
+
+})
+.catch(error => {
+console.log(error);
+
+});
+
